@@ -1,2 +1,2 @@
 # Circles
-Circles using by p5.js+Webpack+Dart Sass (SCSS)
+Circles using p5.js+Webpack+Dart Sass (SCSS)
