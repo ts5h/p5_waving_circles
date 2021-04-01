@@ -8,10 +8,12 @@ interface circle {
   r: number,
   degree: number,
   noiseScale: number,
-  opacity: number,
   seed: number,
   seedStep: number
 }
+
+let eF = 1;
+let dC = 0;
 
 const sketch = (p5: P5) => {
   const circles = Array(100);
@@ -19,7 +21,7 @@ const sketch = (p5: P5) => {
   const setCoordination = (c: circle) => {
     c.cx = p5.width / 2;
     c.cy = p5.height / 2;
-    c.r = p5.min(p5.windowWidth, p5.windowHeight) / 2 * 1.1;
+    c.r = p5.min(p5.windowWidth, p5.windowHeight) / 2;
   };
 
   p5.preload = () => {
@@ -66,8 +68,15 @@ const sketch = (p5: P5) => {
         );
         const pR = c.r * p5.noise(pN);
 
-        const x = pR * p5.cos(rad) + c.cx;
-        const y = pR * p5.sin(rad) + c.cy;
+        // Add expansion factor
+        if (i === 0 && j === 0 &&
+          pR < c.r / 2 && dC === 0) {
+          eF = c.r / pR *.65;
+          console.log(eF);
+        }
+
+        const x = pR * eF * p5.cos(rad) + c.cx;
+        const y = pR * eF * p5.sin(rad) + c.cy;
 
         // Draw points for debug
         // p5.stroke('red');
@@ -93,6 +102,8 @@ const sketch = (p5: P5) => {
       p5.endShape();
       c.seed += c.seedStep;
     });
+
+    dC++;
   };
 
   p5.windowResized = () => {
