@@ -1,0 +1,22 @@
+@use "src/scss/config/variables";
+
+.link.github {
+  position: fixed;
+  right: 0;
+  top: 0;
+
+  opacity: 0;
+  transition: opacity .3s ease-out;
+
+  &.on {
+    opacity: 1;
+  }
+
+  a {
+    display: block;
+    color: white;
+    font-size: 11px;
+    text-decoration: none;
+    padding: 8px 10px;
+  }
+}

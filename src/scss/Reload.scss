@@ -1,0 +1,16 @@
+@use "src/scss/config/variables";
+
+.reload {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+
+  &.on {
+    opacity: 1;
+  }
+
+  button {
+    color: white;
+    font-size: 11px;
+  }
+}
