@@ -18,7 +18,7 @@ const sketch = (p5: P5) => {
   const setCoordination = (c: circle) => {
     c.cx = p5.width / 2;
     c.cy = p5.height / 2;
-    c.r = p5.min(p5.windowWidth, p5.windowHeight) / 2;
+    c.r = p5.min(p5.windowWidth, p5.windowHeight) / 2 * 1.2;
   };
 
   p5.preload = () => {
