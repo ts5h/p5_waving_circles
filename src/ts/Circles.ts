@@ -1,6 +1,6 @@
 import * as P5 from 'p5';
 
-interface circles {
+interface circle {
   pointNum: number,
   cx: number,
   cy: number,
@@ -15,7 +15,7 @@ interface circles {
 const sketch = (p5: P5) => {
   const circles = Array(100);
 
-  const setCoordination = (c: circles) => {
+  const setCoordination = (c: circle) => {
     c.cx = p5.width / 2;
     c.cy = p5.height / 2;
     c.r = p5.min(p5.windowWidth, p5.windowHeight) / 2 * 1.2;
