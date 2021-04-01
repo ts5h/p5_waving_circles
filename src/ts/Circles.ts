@@ -34,22 +34,18 @@ const sketch = (p5: P5) => {
 
       circles[i].pointNum = p5.floor(p5.random(20, 50));
       circles[i].degree = p5.random(-90, 90);
-      circles[i].noiseScale = .01;
+      circles[i].noiseScale = .002;
       circles[i].seed = p5.random(100);
       circles[i].seedStep = p5.random(.001, .0025);
     });
 
     p5.strokeWeight(.1);
     // p5.noLoop();
-
-    p5.background('#333')
   };
 
   p5.draw = () => {
-    // p5.clear();
+    p5.clear();
     p5.background('#333');
-
-    // Circular Dots
     p5.smooth();
     p5.stroke(255);
     p5.noFill();
