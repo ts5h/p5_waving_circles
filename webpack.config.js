@@ -9,7 +9,7 @@ const enabledSourceMap = MODE === 'development';
 
 const webpack = require('webpack');
 const path = require('path');
-const ASSET_PATH = process.env.ASSET_PATH || '/';
+const ASSET_PATH = process.env.ASSET_PATH || './';
 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
