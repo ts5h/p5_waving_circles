@@ -7,7 +7,7 @@ reloadButton.addEventListener('click', function () {
   location.reload();
 });
 
-if (isMobile().tablet || isMobile().phone) {
+if (isMobile().any) {
   reloadButton.addEventListener('touchstart', function () {
     this.classList.add('on');
   });
