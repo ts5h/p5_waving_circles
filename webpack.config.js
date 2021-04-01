@@ -20,7 +20,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/index.ts',
   output: {
     path: path.resolve(__dirname, 'dist'),
     publicPath: ASSET_PATH,
@@ -33,6 +33,12 @@ module.exports = {
   // Set Loaders
   module: {
     rules: [
+      {
+        test: /\.(ts|tsx)$/,
+        use: {
+          loader: "ts-loader"
+        }
+      },
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
@@ -94,6 +100,13 @@ module.exports = {
           }
         ]
       }
+    ]
+  },
+  resolve: {
+    // To resolve .ts file on import statements
+    extensions: [
+      '.ts', '.tsx',
+      '.js', '.jsx'
     ]
   },
   devServer: {

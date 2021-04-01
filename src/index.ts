@@ -1,2 +1,2 @@
 import './scss/circles.scss';
-import './js/circle';
+import './ts/circle';
