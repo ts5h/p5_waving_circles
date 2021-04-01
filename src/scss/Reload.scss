@@ -4,13 +4,33 @@
   position: fixed;
   right: 0;
   bottom: 0;
+  overflow: hidden;
+
+  opacity: .25;
+  transition: opacity .3s ease-out;
 
   &.on {
-    opacity: 1;
+    opacity: .8;
   }
 
   button {
-    color: white;
-    font-size: 11px;
+    display: block;
+    background: white;
+    mask: url(/img/icon_reset.svg) no-repeat center center/20px auto;
+    text-indent: -9999px;
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .reload {
+    transition: none;
+
+    button {
+      background-size: 18px auto;
+      width: 32px;
+      height: 32px;
+    }
   }
 }
