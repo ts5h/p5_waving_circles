@@ -57,7 +57,7 @@ const sketch = (p5: P5) => {
 
       [...new Array(c.pointNum)].forEach((_, j) => {
         const rad = j / c.pointNum * p5.PI * 2 + c.degree;
-
+        
         const pN = p5.noise(
             c.r * p5.cos(rad) * c.noiseScale + c.cx,
             c.r * p5.sin(rad) * c.noiseScale + c.cy,
