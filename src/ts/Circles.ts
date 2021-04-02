@@ -13,7 +13,7 @@ interface circle {
 }
 
 let eF = 1;
-let dC = false;
+let dC = 0;
 
 const sketch = (p5: P5) => {
   const circles = Array(100);
@@ -44,7 +44,7 @@ const sketch = (p5: P5) => {
 
     p5.noFill();
     p5.stroke((isMobile().any ? 'rgba(255,255,255,.2)' : '255'));
-    p5.strokeWeight(isMobile().any ? .5 : .1);
+    p5.strokeWeight(isMobile().any ? .5 : .2);
     // p5.noLoop();
   };
 
@@ -70,10 +70,9 @@ const sketch = (p5: P5) => {
 
         // Add expansion factor
         if (i === 0 && j === 0 &&
-          pR < c.r / 2 && !dC) {
-          eF = c.r / pR *.65;
-          dC = true;
-          // console.log(eF);
+          pR < c.r / 2 && dC === 0) {
+          eF = c.r / pR *.55;
+          console.log(eF);
         }
 
         const x = pR * eF * p5.cos(rad) + c.cx;
@@ -96,13 +95,15 @@ const sketch = (p5: P5) => {
       });
 
       // Draw residual curve vertex
-      startPoints.forEach((c, j) => {
+      startPoints.forEach((c, _) => {
         p5.curveVertex(c.x, c.y);
       });
 
       p5.endShape();
       c.seed += c.seedStep;
     });
+
+    dC++;
   };
 
   p5.windowResized = () => {
