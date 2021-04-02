@@ -71,8 +71,8 @@ const sketch = (p5: P5) => {
         // Add expansion factor
         if (i === 0 && j === 0 &&
           pR < c.r / 2 && dC === 0) {
-          eF = c.r / pR *.55;
-          console.log(eF);
+          eF = c.r / pR * .5;
+          // console.log(eF);
         }
 
         const x = pR * eF * p5.cos(rad) + c.cx;
@@ -106,6 +106,7 @@ const sketch = (p5: P5) => {
     dC++;
   };
 
+  // Resize
   p5.windowResized = () => {
     p5.resizeCanvas(p5.windowWidth, p5.windowHeight);
     circles.forEach((c, _) => {
@@ -113,5 +114,6 @@ const sketch = (p5: P5) => {
     });
   }
 };
+
 
 new P5(sketch);

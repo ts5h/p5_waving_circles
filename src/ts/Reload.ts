@@ -1,24 +1,24 @@
 import isMobile from 'ismobilejs';
 
 // Reload
-const reloadButton = document.querySelector('.reload');
+const Reload = document.querySelector('.reload');
 
-reloadButton.addEventListener('click', function () {
+Reload.addEventListener('click', function () {
   location.reload();
 });
 
 if (isMobile().any) {
-  reloadButton.addEventListener('touchstart', function () {
+  Reload.addEventListener('touchstart', function () {
     this.classList.add('on');
   });
-  reloadButton.addEventListener('touchend', function () {
+  Reload.addEventListener('touchend', function () {
     this.classList.remove('on');
   });
 } else {
-  reloadButton.addEventListener('mouseover', function () {
+  Reload.addEventListener('mouseover', function () {
     this.classList.add('on');
   });
-  reloadButton.addEventListener('mouseout', function () {
+  Reload.addEventListener('mouseout', function () {
     this.classList.remove('on');
   });
 }
