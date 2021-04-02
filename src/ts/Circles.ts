@@ -35,7 +35,7 @@ const sketch = (p5: P5) => {
       circles[i] = {};
       setCoordination(circles[i]);
 
-      circles[i].pointNum = p5.floor(p5.random(20, 50));
+      circles[i].pointNum = p5.floor(p5.random(20, 60));
       circles[i].degree = p5.random(-90, 90);
       circles[i].noiseScale = isMobile().any ? .005 : .002;
       circles[i].seed = p5.random(100);
