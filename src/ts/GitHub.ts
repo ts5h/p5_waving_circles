@@ -1,8 +1,16 @@
 import isMobile from 'ismobilejs';
 
 // Link to GitHub
-if (!isMobile().tablet && !isMobile().phone) {
-  const link = document.querySelector('.github');
+const link = document.querySelector('.github');
+
+if (isMobile().any) {
+  link.addEventListener('touchstart', function () {
+    this.classList.add('on');
+  });
+  link.addEventListener('touchend', function () {
+    this.classList.remove('on');
+  });
+} else {
   link.addEventListener('mouseover', function () {
     this.classList.add('on');
   });

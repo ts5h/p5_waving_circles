@@ -10,27 +10,27 @@
   transition: opacity .3s ease-out;
 
   &.on {
-    opacity: .8;
+    opacity: 1;
   }
 
   button {
     display: block;
     background: white;
-    mask: url(img/icon_reset.svg) no-repeat center center/20px auto;
+    mask: url(img/icon_reset.svg) no-repeat center center / 24px auto;
     text-indent: -9999px;
     width: 36px;
     height: 36px;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: variables.$break-point) {
   .reload {
     transition: none;
 
     button {
-      background-size: 18px auto;
-      width: 32px;
-      height: 32px;
+      background-size: 20px auto;
+      width: 36px;
+      height: 36px;
     }
   }
 }
