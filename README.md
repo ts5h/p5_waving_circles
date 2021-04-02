@@ -1,6 +1,6 @@
 # Circular Perlin Waves
 Perlin noise circles using p5.js + TypeScript + Webpack + Dart Sass  
-https://0bject.co/2021/circluar_perlin_waves
+https://0bject.co/2021/circular_perlin_waves
 
 
 References:
