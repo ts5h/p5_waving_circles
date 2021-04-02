@@ -68,7 +68,7 @@ const sketch = (p5: P5) => {
         );
         const pR = c.r * p5.noise(pN);
 
-        // Add expansion factor
+        // Set expansion parameter if the pR is too small
         if (i === 0 && j === 0 &&
           pR < c.r / 2 && dC === 0) {
           eF = c.r / pR * .5;
