@@ -13,7 +13,7 @@ interface circle {
 }
 
 let eF = 1;
-let dC = 0;
+let dC = false;
 
 const sketch = (p5: P5) => {
   const circles = Array(100);
@@ -21,7 +21,7 @@ const sketch = (p5: P5) => {
   const setCoordination = (c: circle) => {
     c.cx = p5.width / 2;
     c.cy = p5.height / 2;
-    c.r = p5.min(p5.windowWidth, p5.windowHeight) / 2;
+    c.r = p5.min(p5.windowWidth, p5.windowHeight) / 2 * 1.1;
   };
 
   p5.preload = () => {
@@ -70,9 +70,10 @@ const sketch = (p5: P5) => {
 
         // Add expansion factor
         if (i === 0 && j === 0 &&
-          pR < c.r / 2 && dC === 0) {
+          pR < c.r / 2 && !dC) {
           eF = c.r / pR *.65;
-          console.log(eF);
+          dC = true;
+          // console.log(eF);
         }
 
         const x = pR * eF * p5.cos(rad) + c.cx;
@@ -102,8 +103,6 @@ const sketch = (p5: P5) => {
       p5.endShape();
       c.seed += c.seedStep;
     });
-
-    dC++;
   };
 
   p5.windowResized = () => {
