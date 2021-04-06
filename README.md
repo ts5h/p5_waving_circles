@@ -4,6 +4,14 @@ https://0bject.co/2021/waving_circles
 
 [![Waving Circles](https://user-images.githubusercontent.com/1344010/113413357-d2840680-93ba-11eb-8896-a2b579c15fd3.jpg)](https://0bject.co/2021/waving_circles)
 
+### Install &amp; Run
+```yarn
+$ git clone https://github.com/ts5h/p5_waving_circles.git
+$ cd p5_waving_circles
+$ yarn install
+$ yarn start
+```
+
 References:
 - 円に沿ってオブジェクトを配置する - Webdelog  
 https://www.webdelog.info/entry/2016/06/12/arranged-in-the-circumferential-direction.html
