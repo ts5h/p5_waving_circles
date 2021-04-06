@@ -2,7 +2,8 @@
   "name": "circles",
   "version": "0.9",
   "description": "Circles",
-  "main": "./public/index.html",
+  "main": "main.js",
+  "repository": "git@github.com:ts5h/p5_waving_circles.git",
   "author": "0bject / ts5h",
   "license": "MIT",
   "dependencies": {
@@ -42,9 +43,5 @@
     "build:dev": "webpack --mode development --watch",
     "build": "webpack --mode production",
     "start": "webpack --mode development --watch"
-  },
-  "repository": {
-    "type": "git",
-    "url": ""
   }
 }
