@@ -88,7 +88,7 @@ const sketch = (p5: P5) => {
       })
 
       // Draw residual curve vertex
-      startPoints.forEach((lc, ) => {
+      startPoints.forEach((lc) => {
         p5.curveVertex(lc.x, lc.y)
       })
 
@@ -102,7 +102,7 @@ const sketch = (p5: P5) => {
   // Resize
   p5.windowResized = () => {
     p5.resizeCanvas(p5.windowWidth, p5.windowHeight)
-    circles.forEach((c, ) => {
+    circles.forEach((c) => {
       setCoordination(c)
     })
   }
