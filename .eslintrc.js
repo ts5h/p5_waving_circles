@@ -16,5 +16,7 @@ module.exports = {
     '@typescript-eslint',
   ],
   rules: {
+    "no-new": 0,
+    "no-param-reassign": 0
   },
 };

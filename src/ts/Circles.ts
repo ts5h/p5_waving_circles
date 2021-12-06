@@ -1,7 +1,7 @@
 import isMobile from "ismobilejs"
 import * as P5 from "p5"
 
-interface circle {
+type Circle = {
   pointNum: number
   cx: number
   cy: number
@@ -18,7 +18,7 @@ let dC = 0
 const sketch = (p5: P5) => {
   const circles = Array(100)
 
-  const setCoordination = (c: circle) => {
+  const setCoordination = (c: Circle) => {
     c.cx = p5.width / 2
     c.cy = p5.height / 2
     c.r = (p5.min(p5.windowWidth, p5.windowHeight) / 2) * 1.1
@@ -88,21 +88,21 @@ const sketch = (p5: P5) => {
       })
 
       // Draw residual curve vertex
-      startPoints.forEach((c, _) => {
-        p5.curveVertex(c.x, c.y)
+      startPoints.forEach((lc, ) => {
+        p5.curveVertex(lc.x, lc.y)
       })
 
       p5.endShape()
       c.seed += c.seedStep
     })
 
-    dC++
+    dC += 1
   }
 
   // Resize
   p5.windowResized = () => {
     p5.resizeCanvas(p5.windowWidth, p5.windowHeight)
-    circles.forEach((c, _) => {
+    circles.forEach((c, ) => {
       setCoordination(c)
     })
   }
