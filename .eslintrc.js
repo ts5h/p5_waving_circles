@@ -16,7 +16,25 @@ module.exports = {
     '@typescript-eslint',
   ],
   rules: {
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
     "no-new": 0,
     "no-param-reassign": 0
   },
+  settings: {
+    "import/resolver": {
+      node: {
+        paths: ["src"],
+        extensions: [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  }
 };
