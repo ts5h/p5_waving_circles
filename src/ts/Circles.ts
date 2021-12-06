@@ -30,7 +30,6 @@ const sketch = (p5: P5) => {
 
   p5.setup = () => {
     p5.createCanvas(p5.windowWidth, p5.windowHeight)
-
     ;[...new Array(circles.length)].forEach((_, i) => {
       circles[i] = {}
       setCoordination(circles[i])
@@ -57,7 +56,6 @@ const sketch = (p5: P5) => {
     circles.forEach((c, i) => {
       const startPoints = []
       p5.beginShape()
-
       ;[...new Array(c.pointNum)].forEach((_, j) => {
         const rad = (j / c.pointNum) * p5.PI * 2 + c.degree
 

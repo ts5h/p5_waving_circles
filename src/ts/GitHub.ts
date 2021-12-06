@@ -4,17 +4,17 @@ import isMobile from "ismobilejs"
 const link = document.querySelector(".github")
 
 if (isMobile().any) {
-  link.addEventListener("touchstart", function () {
-    this.classList.add("on")
+  link.addEventListener("touchstart", () => {
+    link.classList.add("on")
   })
-  link.addEventListener("touchend", function () {
-    this.classList.remove("on")
+  link.addEventListener("touchend", () => {
+    link.classList.remove("on")
   })
 } else {
-  link.addEventListener("mouseover", function () {
-    this.classList.add("on")
+  link.addEventListener("mouseover", () => {
+    link.classList.add("on")
   })
-  link.addEventListener("mouseout", function () {
-    this.classList.remove("on")
+  link.addEventListener("mouseout", () => {
+    link.classList.remove("on")
   })
 }

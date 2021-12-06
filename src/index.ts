@@ -10,5 +10,5 @@ import "./ts/Circles"
 import "./ts/GitHub"
 import "./ts/Reload"
 
-import { setTheme } from "./ts/ReturnToTop"
+import setTheme from "./ts/ReturnToTop"
 setTheme({ type: "dark" })

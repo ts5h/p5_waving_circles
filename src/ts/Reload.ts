@@ -4,21 +4,21 @@ import isMobile from "ismobilejs"
 const Reload = document.querySelector(".reload")
 
 Reload.addEventListener("click", () => {
-  location.reload()
+  window.location.reload()
 })
 
 if (isMobile().any) {
-  Reload.addEventListener("touchstart", function () {
-    this.classList.add("on")
+  Reload.addEventListener("touchstart", () => {
+    Reload.classList.add("on")
   })
-  Reload.addEventListener("touchend", function () {
-    this.classList.remove("on")
+  Reload.addEventListener("touchend", () => {
+    Reload.classList.remove("on")
   })
 } else {
-  Reload.addEventListener("mouseover", function () {
-    this.classList.add("on")
+  Reload.addEventListener("mouseover", () => {
+    Reload.classList.add("on")
   })
-  Reload.addEventListener("mouseout", function () {
-    this.classList.remove("on")
+  Reload.addEventListener("mouseout", () => {
+    Reload.classList.remove("on")
   })
 }

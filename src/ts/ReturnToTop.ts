@@ -15,18 +15,18 @@ body.prepend(button)
 
 // On mouse
 if (isMobile().any) {
-  button.addEventListener("touchstart", function () {
-    this.classList.add("on")
+  button.addEventListener("touchstart", () => {
+    button.classList.add("on")
   })
-  button.addEventListener("touchend", function () {
-    this.classList.remove("on")
+  button.addEventListener("touchend", () => {
+    button.classList.remove("on")
   })
 } else {
-  button.addEventListener("mouseover", function () {
-    this.classList.add("on")
+  button.addEventListener("mouseover", () => {
+    button.classList.add("on")
   })
-  button.addEventListener("mouseout", function () {
-    this.classList.remove("on")
+  button.addEventListener("mouseout", () => {
+    button.classList.remove("on")
   })
 }
 
@@ -35,9 +35,11 @@ type themeType = {
   type: "dark" | "light"
 }
 
-export const setTheme = (theme: themeType) => {
+const setTheme = (theme: themeType) => {
   // Dark or Light
   if (theme.type === "light") {
     button.classList.add("light")
   }
 }
+
+export default setTheme
