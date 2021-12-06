@@ -1,24 +1,24 @@
-import isMobile from 'ismobilejs';
+import isMobile from "ismobilejs"
 
 // Reload
-const Reload = document.querySelector('.reload');
+const Reload = document.querySelector(".reload")
 
-Reload.addEventListener('click', function () {
-  location.reload();
-});
+Reload.addEventListener("click", () => {
+  location.reload()
+})
 
 if (isMobile().any) {
-  Reload.addEventListener('touchstart', function () {
-    this.classList.add('on');
-  });
-  Reload.addEventListener('touchend', function () {
-    this.classList.remove('on');
-  });
+  Reload.addEventListener("touchstart", function () {
+    this.classList.add("on")
+  })
+  Reload.addEventListener("touchend", function () {
+    this.classList.remove("on")
+  })
 } else {
-  Reload.addEventListener('mouseover', function () {
-    this.classList.add('on');
-  });
-  Reload.addEventListener('mouseout', function () {
-    this.classList.remove('on');
-  });
+  Reload.addEventListener("mouseover", function () {
+    this.classList.add("on")
+  })
+  Reload.addEventListener("mouseout", function () {
+    this.classList.remove("on")
+  })
 }

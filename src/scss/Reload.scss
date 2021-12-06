@@ -6,8 +6,8 @@
   bottom: 0;
   overflow: hidden;
 
-  opacity: .25;
-  transition: opacity .3s ease-out;
+  opacity: 0.25;
+  transition: opacity 0.3s ease-out;
 
   &.on {
     opacity: 1;

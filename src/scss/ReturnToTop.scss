@@ -1,6 +1,5 @@
 @use "config/variables";
-@import url('//fonts.googleapis.com/css2?family=Inter:wght@200;300;400&display=swap');
-
+@import url("//fonts.googleapis.com/css2?family=Inter:wght@200;300;400&display=swap");
 
 /* Return to the HOME on static pages */
 .return-to-top {
@@ -15,7 +14,7 @@
   padding: 0;
 
   opacity: 0;
-  transition: opacity .3s ease-out;
+  transition: opacity 0.3s ease-out;
 }
 
 .return-to-top.on {
@@ -31,7 +30,6 @@
   text-decoration: none;
 }
 
-
 // Light
 .return-to-top {
   &.light {
@@ -43,7 +41,6 @@
   }
 }
 
-
 @media screen and (max-width: 599px) {
   .return-to-top {
     text-indent: -9999px;
@@ -51,7 +48,7 @@
     width: 24px;
     height: 24px;
 
-    opacity: .5;
+    opacity: 0.5;
     transition: none;
   }
 

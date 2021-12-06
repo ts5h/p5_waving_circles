@@ -7,7 +7,7 @@
   top: 0;
 
   opacity: 0;
-  transition: opacity .3s ease-out;
+  transition: opacity 0.3s ease-out;
 
   &.on {
     opacity: 1;
@@ -25,11 +25,9 @@
   }
 }
 
-
 @media screen and (max-width: variables.$break-point) {
-
   .link.github {
-    opacity: .5;
+    opacity: 0.5;
     transition: none;
 
     a {
