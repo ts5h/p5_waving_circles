@@ -2,7 +2,7 @@
 @import url("//fonts.googleapis.com/css2?family=Inter:wght@200;300;400&display=swap");
 
 /* Return to the HOME on static pages */
-.return-to-top {
+.return-to-home {
   position: absolute;
   left: 0;
   top: 0;
@@ -17,11 +17,11 @@
   transition: opacity 0.3s ease-out;
 }
 
-.return-to-top.on {
+.return-to-home.on {
   opacity: 1;
 }
 
-.return-to-top a {
+.return-to-home a {
   display: block;
   color: white;
   font-family: Inter, sans-serif;
@@ -31,7 +31,7 @@
 }
 
 // Light
-.return-to-top {
+.return-to-home {
   &.light {
     background-image: url(/img/arrow-back-to-home-dark.svg);
 
@@ -42,7 +42,7 @@
 }
 
 @media screen and (max-width: 599px) {
-  .return-to-top {
+  .return-to-home {
     text-indent: -9999px;
     background-position: center center;
     width: 24px;
@@ -52,7 +52,7 @@
     transition: none;
   }
 
-  .return-to-top a {
+  .return-to-home a {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     padding: 0;
     width: 100%;

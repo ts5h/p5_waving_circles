@@ -3,10 +3,10 @@ import isMobile from "ismobilejs"
 // Return to top (TYpeScript version)
 // Add button into body
 const button = document.createElement("div")
-button.classList.add("return-to-top")
+button.classList.add("return-to-home")
 
 const anchor = document.createElement("a")
-anchor.textContent = "Back"
+anchor.textContent = "HOME"
 anchor.setAttribute("href", "/")
 button.appendChild(anchor)
 
